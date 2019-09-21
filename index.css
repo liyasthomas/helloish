@@ -1,11 +1,12 @@
 :root {
   --bg-color: #fff;
   --fg-color: #121212;
+  --fg-light-color: #b2b2b2;
 }
 
 ::selection {
-  background: #eeeeee;
-  color: #000000;
+  background: var(--fg-light-color);
+  color: var(--fg-color);
 }
 
 ::-webkit-scrollbar {
@@ -21,7 +22,7 @@
 }
 
 a {
-  color: inherit;
+  color: var(--fg-color);
   text-decoration: none;
 }
 
@@ -83,14 +84,14 @@ button {
 
 input {
   padding: 16px 32px;
-  color: #121212;
+  color: var(--fg-color);
   border-radius: 32px;
   background: #e8f0fe;
 }
 
 select {
   height: 32px;
-  color: #b2b2b2;
+  color: var(--fg-light-color);
   background: transparent;
 }
 
@@ -101,7 +102,7 @@ button {
   margin: 4px;
   padding: 8px 16px;
   border-radius: 32px;
-  color: #b2b2b2;
+  color: var(--fg-light-color);
 }
 
 button:hover {
@@ -116,8 +117,7 @@ footer {
   padding: 16px 0;
 }
 
-/*=========== Search Tool ==========*/
-#searchArea {
+header {
   display: flex;
   flex-direction: column;
   margin: 0 10%;
@@ -164,13 +164,34 @@ footer {
 
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   #images {
-    column-count: 2;
+    column-count: 3;
   }
 }
 
 @media screen and (max-width: 767px) {
   #images {
-    column-count: 1;
+    column-count: 2;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+  header {
+    margin: 0 16px;
+  }
+  footer, #imgArea {
+    left: 16px;
+    right: 16px;
+  }
+  input {
+    padding: 8px 16px;
+    font-size: 12px;
   }
 }
 
@@ -204,7 +225,7 @@ footer {
 
 .tooltip {
   visibility: hidden;
-  background-color: #333;
+  background-color: var(--fg-color);
   color: #fff;
   text-align: center;
   border-radius: 6px;
