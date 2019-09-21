@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+  <title>Colorbook - Color schemes for UI design</title>
+  <meta name="description" content="Color schemes for UI design">
+  <link rel="icon" href="favicon.ico">
+  <meta itemprop="name" content="Colorbook">
+  <meta itemprop="description" content="Color schemes for UI design">
+  <meta itemprop="image" content="icons/icon-192x192.png">
+  <!-- See https://goo.gl/OOhYW5 -->
+  <link rel="manifest" href="manifest.json">
+  <!-- See https://goo.gl/qRE0vM -->
+  <meta name="theme-color" content="#ffffff">
+  <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Colorbook">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Colorbook">
+  <!-- Homescreen icons -->
+  <link rel="apple-touch-icon" href="icons/icon-48x48.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icons/icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="icons/icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192x192.png">
+  <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-tap-highlight" content="no">
+  <!-- OpenGraph -->
+  <meta property="og:site_name" content="Colorbook">
+  <meta property="og:url" content="https://liyasthomas.github.io/colorbook">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Colorbook">
+  <meta property="og:description" content="Color scheme for UI design">
+  <meta property="og:image" content="icons/icon-144x144.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@liyasthomas">
+  <meta name="twitter:creator" content="@liyasthomas">
+  <meta name="twitter:url" content="https://liyasthomas.github.io/colorbook">
+  <meta name="twitter:title" content="Colorbook">
+  <meta name="twitter:description" content="Color scheme for UI design">
+  <meta name="twitter:image" content="icons/icon-144x144.png">
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("sw.js").then(function (registration) {
+          console.log("ServiceWorker registration successful with scope: ", registration.scope);
+        }).catch(function (err) {
+          console.log("ServiceWorker registration failed: ", err);
+        });
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <header id="searchArea">
+    <div class="flex">
+      <div>
+          <h1 class="logo">Helloish 👻👋</h1>
+          <h4 class="description">AWKWARD GIFS OF PEOPLE SAYING HELLO</h4>
+      </div>
+      <div>
+        <button id="playPauseBut" title="Set Autoplay">Auto play: ON</button>
+        <select id="sType" title="Change type search">
+          <option value="gifs/search?">Search Gifs</option>
+          <option value="stickers/search?">Search Stickers</option>
+          <option value="gifs/trending?">Trending Gifs</option>
+          <option value="stickers/trending?">Trending Stickers</option>
+        </select>
+        <input id="inputS" class="search" type="search" placeholder="Search GIFs">
+      </div>
+    </div>
+  </header>
+  <main id="imgArea">
+    <div class="fade bottom"></div>
+    <div id="images"></div>
+    <a id="shareTwitter" title="Share on Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg></a>
+    <a id="shareFb" title="Share on Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg></a>
+    <a id="shareLink" title="Copy link to Clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 15.889v-2.223s-3.78-.114-7 3.333c1.513-6.587 7-7.778 7-7.778v-2.221l5 4.425-5 4.464z"/></svg><span class="tooltip">Copied</span></a>
+  </main>
+  <footer>
+      <div class="flex">
+        <div>
+            <h3>Helloish 👻👋</h3>
+            <h5 class="description">License</h5>
+        </div>
+        <div>
+          <h5>© Helloish 2019 • All rights reserved, all wrongs reserved</h5>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg>
+          </button>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 15.889v-2.223s-3.78-.114-7 3.333c1.513-6.587 7-7.778 7-7.778v-2.221l5 4.425-5 4.464z"/></svg>
+          </button>
+        </div>
+      </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
+</html>
