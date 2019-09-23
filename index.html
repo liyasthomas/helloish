@@ -67,10 +67,16 @@
   <header id="searchArea">
     <div class="flex">
       <div>
+        <a href="./">
           <h1 class="logo">Helloish 👻👋</h1>
-          <h4 class="description">AWKWARD GIFS OF PEOPLE SAYING HELLO</h4>
+        </a>
+        <h4 class="description">AWKWARD GIFS OF PEOPLE SAYING HELLO</h4>
       </div>
-      <div>
+      <div>🌗
+          <label class="theme-switch" for="checkbox" title="Night mode">
+            <input type="checkbox" id="checkbox">
+            <div class="slider round"></div>
+          </label>
         <button id="playPauseBut" title="Set Autoplay" class="hide-on-mobile">Auto play: ON</button>
         <select id="sType" title="Change type search" class="hide-on-mobile">
           <option value="gifs/search?">Search Gifs</option>
@@ -85,27 +91,40 @@
   <main id="imgArea">
     <div class="fade bottom"></div>
     <div id="images"></div>
-    <a id="shareTwitter" title="Share on Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg></a>
-    <a id="shareFb" title="Share on Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg></a>
-    <a id="shareLink" title="Copy link to Clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 15.889v-2.223s-3.78-.114-7 3.333c1.513-6.587 7-7.778 7-7.778v-2.221l5 4.425-5 4.464z"/></svg><span class="tooltip">Copied</span></a>
+    <a class="a" id="shareTwitter" title="Share on Twitter"></a>
+    <a class="a" id="shareFb" title="Share on Facebook"></a>
+    <a class="a" id="shareLink" title="Copy link to Clipboard"><span class="tooltip">Copied</span></a>
   </main>
   <footer>
-      <div class="flex">
-        <div class="hide-on-mobile">
-            <h3>Helloish 👻👋</h3>
-            <h5><span class="description">© Helloish 2019 • All rights reserved • </span><a href="./">License</a><span class="description"> • </span><a href="./">Contact</a></h5>
-        </div>
-        <div>
-          <a href="https://www.buymeacoffee.com/mCWyGldQ0" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 24px;"></a>
-          <a href="https://twitter.com/intent/tweet?text=https://helloish.com" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg></a>
-          </a>
-          <a href="https://facebook.com/sharer/sharer.php?u=https://helloish.com" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>
-          </a>
-          <h5>Built with 🍷 & 🥩 in New York</h5>
-        </div>
+    <div class="flex">
+      <div class="hide-on-mobile">
+        <h3>Helloish 👻👋</h3>
+        <h5>
+          Built with 🍷 & 🥩 in New York <span class="description">© Helloish 2019 • All rights reserved</span>
+        </h5>
       </div>
+      <div>
+        <a href="https://www.buymeacoffee.com/mCWyGldQ0" target="_blank"><img
+            src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png"
+            alt="Buy Me A Coffee" style="height: 24px;"></a>
+        <a href="https://twitter.com/intent/tweet?text=https://helloish.com" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z" />
+          </svg>
+        </a>
+        <a href="https://facebook.com/sharer/sharer.php?u=https://helloish.com" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
+          </svg>
+        </a>
+        <h5>
+          <a href="./">License</a><span class="description"> • </span><a href="./">Contact</a>
+        </h5>
+      </div>
+    </div>
+    </div>
   </footer>
   <script src="index.js"></script>
 </body>
