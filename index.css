@@ -179,7 +179,7 @@ header {
   }
 
   .logo {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .flex {
@@ -204,6 +204,11 @@ header {
   input {
     padding: 8px 16px;
     font-size: 12px;
+    width: 100%;
+  }
+
+  #imgArea {
+    top: 166px;
   }
 }
 
