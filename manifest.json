@@ -1,7 +1,7 @@
 {
-	"name": "Colorbook",
-	"short_name": "Colorbook",
-	"description": "Color scheme for UI design",
+	"name": "Helloish",
+	"short_name": "Helloish",
+	"description": "AWKWARD GIFS OF PEOPLE SAYING HELLO",
 	"icons": [
 		{
 			"src": "icons/icon-48x48.png",

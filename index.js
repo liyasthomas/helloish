@@ -199,10 +199,10 @@ window.onload = () => {
     .addEventListener('click', e => playPauseImage())
 
   document.getElementById('shareFb').addEventListener('click', ({target}) => {
-    window.open(`https://facebook.com/sharer/sharer.php?u=${target.getAttribute('data')}`)
+    window.open(`https://facebook.com/sharer/sharer.php?t=Helloish 👻👋 • AWKWARD GIFS OF PEOPLE SAYING HELLO&u=${target.getAttribute('data')}`)
   })
   document.getElementById('shareTwitter').addEventListener('click', ({target}) => {
-    window.open(`https://twitter.com/intent/tweet?text=${target.getAttribute('data')}`)
+    window.open(`https://twitter.com/intent/tweet?text=Helloish 👻👋 • AWKWARD GIFS OF PEOPLE SAYING HELLO&url=${target.getAttribute('data')}`)
   })
   document.getElementById('shareLink').addEventListener('click', ({target}) => {
     copyToClipboard(target.getAttribute('data'))
@@ -265,3 +265,18 @@ const switchTheme = ({
 	}
 }
 toggleSwitch.addEventListener('change', switchTheme, false)
+
+const modal = document.querySelector('.modal')
+const trigger = document.querySelector('.trigger')
+const closeButton = document.querySelector('.close-button')
+const toggleModal = () => modal.classList.toggle('show-modal')
+const windowOnClick = ({
+	target
+}) => {
+	if (target === modal) {
+		toggleModal()
+	}
+}
+trigger.addEventListener('click', toggleModal)
+closeButton.addEventListener('click', toggleModal)
+window.addEventListener('click', windowOnClick)
