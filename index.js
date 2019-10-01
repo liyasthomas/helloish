@@ -178,6 +178,19 @@ window.onload = () => {
   const w = window_WidthHeight().width;
   const h = window_WidthHeight().height;
 
+  // scroll page with up/down arrows of keyboard
+  document.body.onkeydown = function(e) {
+    let code = e.keyCode;
+    let imgArea = document.getElementById('imgArea');
+
+    if (code === 40) {
+      imgArea.scrollTo(0, imgArea.scrollTop + 35);
+    }
+    else if (code === 38) {
+      imgArea.scrollTo(0, imgArea.scrollTop - 35);
+    }
+  }
+
   // add more gifs when scroll
   document.getElementById('imgArea').addEventListener('scroll', ({target}) => {
     const ele = target;
