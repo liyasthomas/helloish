@@ -117,7 +117,7 @@ button {
 footer {
   position: absolute;
   right: 10%;
-  bottom: 0;
+  bottom: 0px;
   left: 10%;
   padding: 16px 0;
 }
