@@ -225,9 +225,10 @@ window.onload = () => {
   imgArea.addEventListener('mouseover', ({target}) => {
     if (target.matches('img')) {
       const eles = document.getElementsByClassName('a');
+      let realImagePosition = target.getBoundingClientRect();
       for (let i = 0; i < eles.length; i++) {
-        eles[i].style.top = `${target.y + 16}px`
-        eles[i].style.left = `${target.x + 32 * i}px`
+        eles[i].style.top = `${realImagePosition.y + 16}px`
+        eles[i].style.left = `${realImagePosition.x + 32 * i}px`
         eles[i].setAttribute('data', target.src)
       }
 
