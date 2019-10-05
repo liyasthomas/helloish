@@ -173,6 +173,12 @@ header {
   }
 }
 
+@media screen and (min-width:767px) and (max-width:1080px){
+  #imgArea{
+    top:166px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   #images {
     column-count: 2;
@@ -208,7 +214,7 @@ header {
   }
 
   #imgArea {
-    top: 166px;
+    top: 190px;
   }
 }
 
