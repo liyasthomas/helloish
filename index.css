@@ -377,3 +377,7 @@ input:checked+.slider:before {
   position: absolute;
   transition: all .2s ease;
 }
+
+.sharer a {
+  cursor: pointer;
+}

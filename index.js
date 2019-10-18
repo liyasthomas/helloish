@@ -217,6 +217,11 @@ window.onload = () => {
   document.getElementById('shareTwitter').addEventListener('click', ({target}) => {
     window.open(`https://twitter.com/intent/tweet?text=Helloish 👻👋 • AWKWARD GIFS OF PEOPLE SAYING HELLO&url=${target.getAttribute('data')}`)
   })
+  if (navigator.share) {
+    document.getElementById('shareAll').style.display = "block";
+  } else {
+    document.getElementById('shareAll').style.display = "none";
+  }
   document.getElementById('shareAll').addEventListener('click', ({target}) => {
     if (navigator.share) {
       navigator.share({
