@@ -217,6 +217,18 @@ window.onload = () => {
   document.getElementById('shareTwitter').addEventListener('click', ({target}) => {
     window.open(`https://twitter.com/intent/tweet?text=Helloish 👻👋 • AWKWARD GIFS OF PEOPLE SAYING HELLO&url=${target.getAttribute('data')}`)
   })
+  document.getElementById('shareAll').addEventListener('click', ({target}) => {
+    if (navigator.share) {
+      navigator.share({
+          title: `Helloish 👻👋`,
+          text: `Helloish 👻👋`,
+          url: target.getAttribute('data')
+        }).then(() => {})
+        .catch(console.error);
+    } else {
+      console.log("No native share support!")
+    }
+  })
   document.getElementById('shareLink').addEventListener('click', ({target}) => {
     copyToClipboard(target.getAttribute('data'))
   })
